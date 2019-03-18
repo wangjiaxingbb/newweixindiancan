@@ -1,0 +1,52 @@
+<!--index.wxml-->
+<<<<<<< HEAD
+<!-- 以下是对一个自定义组件的引用 -->
+  <food-select isShow="{{showTaste}}" foodInfo="{{foodInfo}}" defaultTaste="{{foodInfo.tasteArr.length==0?'':foodInfo.tasteArr[0]}}" bindmyevent="{{onCb}}"></food-select>
+<view class='container'>
+<!-- 轮播图 -->
+  <swiper class='swiper' indicator-dots="{{true}}" autoplay="{{true}}" circular="{{true}}" interval="5000" duration="500">
+    <swiper-item wx:for="{{swiper}}" wx:if="{{item.img}}" wx:key="{{item}}">
+      <image src="{{item.img}}" mode='scaleToFill' />
+    </swiper-item>
+  </swiper>
+  <!-- 说明 -->
+  <view class='tip'>
+    <image mode='widthFix' src='/images/flow.png'></image>
+    <view class='btn' bindtap='orderFood'>马上点餐</view>
+  </view>
+  <!-- 精品推荐 -->
+  <view class="h2">
+    <image class="hot_line" style="z-index:1" src="/images/divide_l.png"></image>
+    <text class="title">精品推荐</text>
+    <image class="hot_line" style="z-index:1" src="/images/divide_r.png"></image>
+  </view>
+  <view class='recommond'>
+    <view class='rec-right'>
+      <image bindtap='selectSpec' data-foodInfo='{{goodFoods[0]}}' src="{{goodFoods[0].img}}" mode='scaleToFill' />
+    </view>
+    <view class='rec-left'>
+      <image bindtap='selectSpec' data-foodInfo='{{goodFoods[1]}}' src="{{goodFoods[1].img}}" mode='scaleToFill' />
+      <image bindtap='selectSpec' data-foodInfo='{{goodFoods[2]}}' src="{{goodFoods[2].img}}" mode='scaleToFill' />
+    </view>
+  </view>
+  <!-- 热门菜系 -->
+  <view class="h2">
+    <image class="hot_line" style="z-index:1" src="/images/divide_l.png"></image>
+    <text class="title">热门菜系</text>
+    <image class="hot_line" style="z-index:1" src="/images/divide_r.png"></image>
+  </view>
+  <view class='hot-food' wx:for="{{hotFoodArr}}" wx:if="{{item.img}}" wx:key="{{item}}">
+    <image bindtap='selectSpec' data-foodInfo='{{item}}' class="hot_line" style="z-index:1" src="{{item.img}}"></image>
+  </view>
+</view>
+=======
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+</view>
+>>>>>>> parent of e97173e... 更新代码

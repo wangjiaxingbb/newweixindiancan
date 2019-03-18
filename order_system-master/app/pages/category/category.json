@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#eec82e",
+  "backgroundColor": "#000000",
+  "navigationBarTitleText": "分类列表",
+  "usingComponents": {
+    "food-select": "/components/food-select/index"
+  }
+}

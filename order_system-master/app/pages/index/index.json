@@ -1,0 +1,12 @@
+{
+<<<<<<< HEAD
+  "navigationBarBackgroundColor": "#eec82e",
+  "backgroundColor": "#000000",
+  "navigationBarTitleText": "首页",
+  "usingComponents": {
+    "food-select": "/components/food-select/index"
+  }
+=======
+  "usingComponents": {}
+>>>>>>> parent of e97173e... 更新代码
+}
