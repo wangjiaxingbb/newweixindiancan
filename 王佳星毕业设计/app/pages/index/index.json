@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#eec82e",
+  "backgroundColor": "#000000",
+  "navigationBarTitleText": "首页",
+  "usingComponents": {
+    "food-select": "/components/food-select/index"
+  }
+}

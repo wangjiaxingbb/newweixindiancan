@@ -1,0 +1,30 @@
+<!--pages/me/me.wxml-->
+<view>
+  <view class='image-wrap'>
+    <image src='{{userInfo.avatarUrl}}' mode='scaleToFill'></image>
+    <view class='nick-name'>{{userInfo.nickName}}</view>
+  </view>
+  <!-- 待支付 -->
+  <view wx:if="{{makingFood.length !== 0}}" class="h2" style='margin-top: 0'>
+    <image class="hot_line" style="z-index:1" src="/images/divide_l.png"></image>
+    <text class="title">正在烹饪</text>
+    <image class="hot_line" style="z-index:1" src="/images/divide_r.png"></image>
+  </view>
+  <view wx:if="{{makingFood.length === 0}}" style='text-align:center;color:#ccc;font-size: 14px'>暂无正在烹饪的菜品哦~</view>
+  <view wx:if="{{makingFood.length !== 0}}" class='food-item' wx:for="{{makingFood}}" wx:key="{{item.id}}">
+    <image wx:if="{{item.img}}" class='img' src="{{item.img}}" mode='scaleToFill' />
+    <view wx:else class='img'>暂无图片</view>
+    <view class='food-info'>
+      <view class='food-title over-hidden'>{{item.name}}</view>
+      <view class='price'>价格：¥{{item.totalPrice}}</view>
+      <view class='symbol-wrap'>
+        <view class='number'>数量：{{item.num}}</view>
+      </view>
+    </view>
+    <view class='order-wrap'>
+    <!-- <view wx:if="{{makingFood.length !== 0}}" class='order-wrap'> -->
+      <view class='total-money'>合计{{totalMoney}}元</view>
+      <view bindtap='settle' class='order'>结账</view>
+    </view>
+  </view>
+</view>

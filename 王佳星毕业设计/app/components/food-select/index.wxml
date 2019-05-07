@@ -1,0 +1,15 @@
+<!-- 这是自定义组件的内部WXML结构 -->
+<view class='mask' wx:if="{{isShow}}">
+  <view class='wrap'>
+    <image src="{{foodInfo.img}}" mode='scaleToFill' />
+    <view class='title'>选择口味</view>
+    <scroll-view class='scroll-taste' scroll-y>
+      <view wx:for="{{foodInfo.tasteArr}}" wx:key="{{item}}" class='taste {{foodInfo.defaultTaste == item?"active-scroll":""}}' data-item='{{item}}' bindtap='getTaste'>{{item}}</view>
+    </scroll-view>
+    <view class='title'>选择数量</view>
+    <slider activeColor='rgb(243, 227, 0)' style='width: 400rpx;margin: 0 auto' bindchange="sliderChange" min="1" max="10" value="{{foodInfo.num}}" show-value />
+    <view bindtap='confirm' class='confirm'>确认选择</view>
+  </view>
+  <view class='slice'></view>
+  <view bindtap='close' class='close'>X</view>
+</view>

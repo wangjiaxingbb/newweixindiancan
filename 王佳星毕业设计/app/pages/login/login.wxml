@@ -1,0 +1,4 @@
+<view style='text-align: center' wx:if="{{!userInfo}}">
+  <image class='login-img' src='/images/logo.jpg'></image>
+  <button class='login-btn' open-type='getUserInfo' bindgetuserinfo='getUserInfo'>登录</button>
+</view>

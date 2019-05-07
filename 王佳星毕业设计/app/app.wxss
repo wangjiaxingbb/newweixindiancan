@@ -1,0 +1,64 @@
+/**app.wxss**/
+
+.container {
+  background-color: #f3f3f3;
+}
+
+/* 标题 */
+
+.h2 {
+  margin-top: 20rpx;
+  text-align: center;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #fff;
+}
+
+.h2 image {
+  width: 146rpx;
+  height: 10rpx;
+}
+
+.h2 text {
+  color: #959595;
+  margin: 0 40rpx;
+  font-family: "Microsoft YaHei";
+}
+
+.hot_line {
+  z-index: -1;
+}
+
+.title {
+  color: #666;
+  font-size: 32rpx;
+}
+
+/* 隐藏滚动条 */
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+/* 溢出隐藏 */
+
+.over-hidden {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* mt10rpx */
+
+.mt10 {
+  margin-top: 10rpx;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}

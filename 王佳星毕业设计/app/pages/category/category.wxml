@@ -1,0 +1,32 @@
+<!--pages/category/category.wxml-->
+<view class="container log-list">
+  <!-- 以下是对一个自定义组件的引用 -->
+  <food-select isShow="{{showTaste}}" foodInfo="{{foodInfo}}" defaultTaste="{{foodInfo.tasteArr.length==0?'':foodInfo.tasteArr[0]}}" bindmyevent="{{onCb}}"></food-select>
+</view>
+<view class='container'>
+  <view class="h2">
+    <image class="hot_line" style="z-index:1" src="/images/divide_l.png"></image>
+    <text class="title">全部菜品</text>
+    <image class="hot_line" style="z-index:1" src="/images/divide_r.png"></image>
+  </view>
+  <view class='wrap mt10'>
+    <scroll-view class='scroll-cate-view' scroll-y>
+      <view wx:for="{{cateArr}}" wx:key="{{item.id}}" data-item='{{item}}' bindtap='getFoodByCate' class='over-hidden {{activeCate == item.id?"active-view":""}}'>{{item.name}}</view>
+    </scroll-view>
+    <scroll-view class='scroll-food-view' scroll-y>
+      <view wx:if="{{foodArr.length === 0}}" style='text-align:center;color:#ccc;font-size: 14px'>暂无菜品~</view>
+      <view wx:if="{{foodArr.length !== 0}}" class='food-item' wx:for="{{foodArr}}" wx:key="{{item.id}}">
+        <image wx:if="{{item.img}}" class='img' src="{{item.img}}" mode='scaleToFill' />
+        <view wx:else class='img'>暂无图片</view>
+        <view class='food-info'>
+          <view class='food-title over-hidden'>{{item.name}}</view>
+          <view class='price'>单价：¥{{item.price}}</view>
+          <view class='select-btn' bindtap='selectSpec' data-foodInfo='{{item}}'>
+            选规格
+            <view wx:if="{{item.selectedNum}}" class='num'>{{item.selectedNum}}</view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

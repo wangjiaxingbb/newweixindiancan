@@ -1,0 +1,39 @@
+.overflow-y-auto {
+  overflow-y: auto;
+}
+.overflow-x-auto {
+  overflow-x: auto;
+}
+/* 隐藏滚动条 */
+.hide-scroll::-webkit-scrollbar {
+  width: 0 !important;
+}
+.hide-scroll {
+  -ms-overflow-style: none;
+}
+.hide-scroll {
+  overflow: -moz-scrollbars-none;
+}
+/* 文字居中 */
+.tac {
+  text-align: center;
+}
+/* 清除浮动 */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:after {
+  content: '.';
+  clear: both;
+  display: block;
+  height: 0px;
+}
+/* 分页样式 */
+.page-blok {
+    float: right;
+    margin: 10px 0;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
